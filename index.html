@@ -6,10 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket Transform and Transitions</title>
+    <style>
+        .field {
+            border: 2px solid red;
+        }
+
+        .field:hover .bat {
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+
+        .field:hover .ball {
+            transform: translate(765px, -100px);
+        }
+
+        .bat {
+            transition: transform 0.1s ease-in;
+        }
+
+        .ball {
+            position: relative;
+            left: 533px;
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            border-radius: 25px;
+            transition: transform 1s ease-out 0.1s;
+        }
+    </style>
 </head>
 
 <body>
-    <img src="image/bat01.png" alt="">
+    <div class="field">
+        <img class="bat" src="image/bat01.png" alt="">
+
+        <div class="ball">
+
+        </div>
+    </div>
 
 </body>
 
